@@ -1,0 +1,2 @@
+include cbpi4_Arduino_GPIO/config.yaml
+recursive-include cbpi4_Arduino_GPIO/static *

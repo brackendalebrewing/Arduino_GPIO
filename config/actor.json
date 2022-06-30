@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "id": "mDkFguCjgzNZrBQ3Mg6tn9",
+            "name": "test1",
+            "power": 100,
+            "props": {
+                "GPIO": 6,
+                "Inverted": "No"
+            },
+            "state": false,
+            "type": "ArduinoGPIOActor"
+        },
+        {
+            "id": "EoQ2uyhiHiUfnUHfkYwir3",
+            "name": "test2",
+            "power": 100,
+            "props": {
+                "Frequency": "100",
+                "GPIO": 5
+            },
+            "state": false,
+            "type": "ArduinoGPIOPWMActor"
+        }
+    ]
+}

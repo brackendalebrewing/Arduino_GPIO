@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: telemetrix-aio
+Version: 1.11
+Summary: Remotely Control And Monitor Arduino-Core devices
+Home-page: https://github.com/MrYsLab/telemetrix-aio
+Author: Alan Yorinks
+Author-email: MisterYsLab@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/MrYsLab/telemetrix-aio
+Keywords: telemetrix,Arduino,Protocol,Python
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: pyserial
+
+# The Telemetrix Project
+
+The Telemetrix Project is a modern-day replacement for 
+Arduino StandardFirmata, equipped with many more built-in features than 
+StandardFirmata. 
+
+Here is a feature comparison between Telemetrix and StandardFirmata:
+
+| Feature | Telemetrix | StandardFirmata |
+|-------|:----------:|:-----------------:|
+|     Analog Input    |       X     |      X           |
+|     Analog Output (PWM)    |       X     |      X           |
+|     Digital Input    |       X     |      X           |
+|     Digital Output    |       X     |      X           |
+|     i2c Primitives  |       X     |      X           |
+|     Servo Motor Control  |       X     |      X           |
+|     DHT Temperature/Humidity Sensor  |       X     |                 |
+|     OneWire Primitives |       X     |                 |
+|     HC-SR04 Sonar Distance Sensor  |       X     |                 |
+|     SPI Primitives  |       X     |                 |
+|     Stepper Motor Control (AccelStepper) |       X     |                 |
+|    Python Threaded Client Included  |       X     |      
+|    Python Asyncio Client Included  |       X     |
+|    Support For STM32 Boards (Black Pill)|       X     |    
+|    Designed To Be User Extensible |       X     |                 |
+|    Integrated Debugging Aids Provided |       X     |                 |
+|    Examples For All Features |       X     |                 |
+
+
+
+The project consists of a 
+[Python client API](https://htmlpreview.github.io/?https://github.com/MrYsLab/telemetrix-aio/blob/master/html/telemetrix_aio/index.html)
+used to create a Python 
+client 
+application and C++ servers that communicate with the Python client over a serial or WiFi link. 
+
+This repository is the Python 3 asyncio client API.
+
+The server for Arduino serial linked devices is called
+[Telemetrix4Arduino](https://github.com/MrYsLab/Telemetrix4Arduino).
+
+The WiFi server for ESP8266 devices is called
+[Telemetrix4Esp8266](https://github.com/MrYsLab/Telemetrix4Esp8266).
+
+A [User's Guide](https://mryslab.github.io/telemetrix/) explaining installation and use is available online.
+
+
+
+
+
