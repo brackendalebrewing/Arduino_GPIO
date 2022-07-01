@@ -9,12 +9,12 @@
                 "Inverted": "No"
             },
             "state": false,
-            "type": "ArduinoGPIOActor"
+            "type": "ArduinoGPIOPWMActor"
         },
         {
             "id": "EoQ2uyhiHiUfnUHfkYwir3",
             "name": "test2",
-            "power": 100,
+            "power": 255,
             "props": {
                 "Frequency": "100",
                 "GPIO": 5

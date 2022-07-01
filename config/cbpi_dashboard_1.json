@@ -1,0 +1,29 @@
+{
+    "elements": [
+        {
+            "id": "6672ee75-83b0-4682-b8e3-b34931f1d4bd",
+            "name": "Actor1",
+            "props": {
+                "action": "yes",
+                "actor": "mDkFguCjgzNZrBQ3Mg6tn9",
+                "size": "12"
+            },
+            "type": "ActorButton",
+            "x": 370,
+            "y": 215
+        },
+        {
+            "id": "a8d12700-c4d8-4089-ad6e-cfbc7e2ad366",
+            "name": "Actor2",
+            "props": {
+                "action": "yes",
+                "actor": "EoQ2uyhiHiUfnUHfkYwir3",
+                "size": "12"
+            },
+            "type": "ActorButton",
+            "x": 620,
+            "y": 215
+        }
+    ],
+    "pathes": []
+}

@@ -235,8 +235,8 @@ class ArduinoGPIOPWMActor(CBPiActor):
         self.power=int(Power)
         if self.power < 0:
             self.power = 0
-        if self.power > 100:
-            self.power = 100           
+        if self.power > 255:
+            self.power = 255          
         await self.set_power(self.power)
         
     async def on_start(self):
@@ -257,7 +257,7 @@ class ArduinoGPIOPWMActor(CBPiActor):
         if power is not None:
             self.power = power
         else:
-            self.power = 100
+            self.power = 255
 
         logging.info("PWM Final Power: {}".format(self.power))    
         
