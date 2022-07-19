@@ -70,7 +70,7 @@ Nano =	{
 
 Mega =	{
   "total_count"  : 70,
-  "digital_pins":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],
+  "digital_pins":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,45,46,47,48,49,50,51,52,53],
   "pwm_count": 15,
   "pwm_pins":[2,3,5,6,9,10,11,12,13, 44,45,46],
   "analog_count":16,
@@ -151,34 +151,12 @@ class AtrduinoTelemetrix(CBPiExtension):
         address=77
         await TelemetrixInitialize()
 
-    """
-    async def PCF8574_Address(self): 
-        global PCF8574_address
-        PCF8574_address= 555
-        if PCF8574_address is None:
-            logger.info("INIT Arduino")
-            try:
-                #await self.cbpi.config.add('PCF8574_Address', '0x20', ConfigType.STRING, 'PCF8574 I2C Bus address (e.g. 0x20). Change requires reboot')
-                #PCF8574_Address = self.cbpi.config.get("PCF8574_Address", None)
-                print("poop")
-            except:
-                logger.warning('Unable to update database')        
-    """
-
-
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 @parameters([Property.Select(label="GPIO", options=Mega['digital_pins']), Property.Select(label="Inverted", options=["Yes", "No"],description="No: Active on high; Yes: Active on low")])
 class ArduinoGPIOActor(CBPiActor):
 
-    @action(key="Cusotm Action", parameters=[Property.Number("Value", configurable=True), Property.Kettle("Kettle")])
-    async def custom_action(self, **kwargs):
-        print("ACTION", kwargs)
-        
-    
-    @action(key="Cusotm Action2", parameters=[Property.Number("Value", configurable=True)])
-    async def custom_action2(self, **kwargs):
-        print("ACTION2")
+   
         
 
     def get_GPIO_state(self, state):
@@ -217,16 +195,9 @@ class ArduinoGPIOActor(CBPiActor):
             await asyncio.sleep(1)
             
 
-@parameters([Property.Select(label="GPIO", options=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]), 
+@parameters([Property.Select(label="GPIO", options=Mega['pwm_pins']), 
     Property.Number("Frequency", configurable=True)])
 class ArduinoGPIOPWMActor(CBPiActor):
-    """
-    # Custom property which can be configured by the user
-    @action("test", parameters={})
-    async def power(self, **kwargs):        
-        #self.p.ChangeDutyCycle(1)
-        self.p.analog_write(self.gpio, 250)
-    """
 
         # Custom property which can be configured by the user
     @action("Set Power", parameters=[Property.Number(label="Power", configurable=True,description="Power Setting [0-100]")])
